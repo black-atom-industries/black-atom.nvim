@@ -4,6 +4,7 @@ local lib = require("black-atom.lib")
 local highlight_map_extension = {
     map = function(colors, config)
         local fg = colors.ui.fg
+        local syntax = colors.syntax
         local palette = colors.palette
 
         -- Treesitter Syntax Highlights (See: `:h treesitter-highlight-groups`)
@@ -34,11 +35,13 @@ local highlight_map_extension = {
             ["@exception"] = { fg = palette.magenta },
 
             ["@function"] = lib.highlights.extend_hl(
-                { fg = palette.yellow, bold = true },
+                { fg = syntax.func.default, bold = true },
                 config.styles.syntax.functions
             ),
-            ["@function.builtin"] = lib.highlights.extend_hl({ fg = palette.yellow }, config.styles.syntax.functions),
-            ["@function.macro"] = lib.highlights.extend_hl({ fg = palette.yellow }, config.styles.syntax.functions),
+            -- ["@function.builtin"] = lib.highlights.extend_hl({ fg = palette.yellow }, config.styles.syntax.functions),
+            -- ["@function.macro"] = lib.highlights.extend_hl({ fg = palette.yellow }, config.styles.syntax.functions),
+
+            ["@method"] = { fg = syntax.func.method, bold = true },
 
             ["@include"] = { fg = palette.magenta },
 
@@ -47,8 +50,6 @@ local highlight_map_extension = {
             ["@keyword"] = { link = "Keyword" },
 
             ["@label"] = { fg = palette.dark_yellow },
-
-            ["@method"] = { fg = palette.yellow, bold = true },
 
             ["@module"] = { fg = palette.dark_blue },
 
