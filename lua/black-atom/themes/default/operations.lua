@@ -5,22 +5,22 @@ local M = {}
 ---@type BlackAtom.Theme.Primaries
 M.primaries = {
     -- Lows
-    "#141515",
-    "#181b1a",
-    "#1c1f1e",
-    "#222726",
+    "#1a1a1a",
+    "#242424",
+    "#2e2e2e",
+    "#393939",
 
     -- Mids
-    "#3b4743",
-    "#52635d",
-    "#5b6f68",
-    "#738b83",
+    "#44524d",
+    "#576962",
+    "#667d75",
+    "#8fa29c",
 
     -- Highs
-    "#9fafa7",
-    "#abbbb3",
-    "#c4d4cc",
-    "#d0e0d8",
+    "#bbc6c1",
+    "#c7d1cd",
+    "#d3dfd9",
+    "#dfeae5",
 }
 
 ---@type BlackAtom.Theme.Palette
@@ -103,14 +103,14 @@ M.ui = {
 M.syntax = {
     default = M.palette.gray,
     variable = {
-        default = M.palette.blue,
-        builtin = M.palette.blue,
-        parameter = M.palette.dark_yellow,
-        member = M.palette.blue,
+        default = M.primaries[8],
+        builtin = M.primaries[8],
+        parameter = M.primaries[10],
+        member = M.primaries[8],
     },
     constant = {
-        default = M.palette.dark_yellow,
-        builtin = M.palette.dark_yellow,
+        default = M.palette.white,
+        builtin = M.palette.white,
     },
     module = {
         default = M.palette.dark_blue,
@@ -128,8 +128,8 @@ M.syntax = {
         default = M.palette.dark_yellow,
     },
     type = {
-        default = M.palette.yellow,
-        builtin = M.palette.yellow,
+        default = M.palette.white,
+        builtin = M.palette.white,
     },
     attribute = {
         default = M.palette.dark_yellow,
@@ -150,10 +150,10 @@ M.syntax = {
         default = M.palette.red,
     },
     punctuation = {
-        default = M.palette.gray,
-        delimiter = M.palette.gray,
-        bracket = M.palette.gray,
-        special = M.palette.gray,
+        default = M.palette.light_gray,
+        delimiter = M.palette.light_gray,
+        bracket = M.palette.light_gray,
+        special = M.palette.light_gray,
     },
     comment = {
         default = M.palette.gray,
