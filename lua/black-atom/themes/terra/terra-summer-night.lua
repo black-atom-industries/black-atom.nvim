@@ -1,56 +1,56 @@
-local darken = require("black-atom.lib.color").darken
+local lib = require("black-atom.lib")
 
 local M = {}
 
----@type BlackAtom.Colors.Primaries
+---@type BlackAtom.Theme.Primaries
 M.primaries = {
     -- Lows
-    "#141515",
-    "#181b1a",
-    "#1c1f1e",
-    "#222726",
+    "#1a1c24",
+    "#1f2129",
+    "#23262f",
+    "#282b35",
 
     -- Mids
-    "#3b4743",
-    "#52635d",
-    "#5b6f68",
-    "#738b83",
+    "#47506b",
+    "#5b678a",
+    "#7581a4",
+    "#858fae",
 
     -- Highs
-    "#9fafa7",
-    "#abbbb3",
-    "#c4d4cc",
-    "#d0e0d8",
+    "#91a0bc",
+    "#9facc6",
+    "#bcc9db",
+    "#c8d7e8",
 }
 
----@type BlackAtom.Colors.Palette
+---@type BlackAtom.Theme.Palette
 M.palette = {
     black = M.primaries[2],
-    gray = M.primaries[5],
+    gray = M.primaries[4],
 
-    dark_red = "#9891d6",
-    red = "#a6a1df",
+    dark_red = "#bf5441",
+    red = "#c06a59",
 
-    dark_green = "#93c270",
-    green = "#a0ce7d",
+    dark_green = "#729e60",
+    green = "#85b97e",
 
-    dark_yellow = M.primaries[9],
-    yellow = "#9BE197",
+    dark_yellow = "#f2a557",
+    yellow = "#dca958",
 
-    dark_blue = M.primaries[10],
-    blue = M.primaries[11],
+    dark_blue = "#9f99e5",
+    blue = "#96b9e9",
 
-    dark_magenta = "#a498e9",
-    magenta = "#b7aded",
+    dark_magenta = "#d5a9c3",
+    magenta = "#c4acd7",
 
-    dark_cyan = "#6ac779",
-    cyan = "#88dc96",
+    dark_cyan = "#619f80",
+    cyan = "#7bb7a4",
 
-    light_gray = M.primaries[8],
+    light_gray = M.primaries[9],
     white = M.primaries[11],
 }
 
----@type BlackAtom.Colors.Semantics
+---@type BlackAtom.Theme.UI
 M.semantics = {
     bg = {
         primary = {
@@ -65,8 +65,8 @@ M.semantics = {
         },
         active = M.primaries[4],
         match = {
-            active = darken(M.palette.magenta, 0.15, M.primaries[1]),
-            passive = darken(M.palette.magenta, 0.05, M.primaries[1]),
+            active = lib.color.darken(M.palette.magenta, 0.25, M.primaries[1]),
+            passive = lib.color.darken(M.palette.magenta, 0.15, M.primaries[1]),
         },
         diff = {
             add = M.palette.green,
@@ -86,9 +86,8 @@ M.semantics = {
             main = M.primaries[8],
             light = M.primaries[9],
         },
-        active = M.palette.cyan,
+        active = M.palette.yellow,
         invert = M.primaries[2],
-        -- this is a comment
         neutral = M.primaries[6],
         diff = {
             add = M.palette.green,
@@ -99,7 +98,7 @@ M.semantics = {
     },
 }
 
----@type BlackAtom.ThemeColors
+---@type BlackAtom.Theme.Colors
 M.colors = {
     none = "NONE",
     primaries = M.primaries,
@@ -107,16 +106,16 @@ M.colors = {
     semantics = M.semantics,
 }
 
----@type BlackAtom.ThemeMeta
+---@type BlackAtom.Theme.Meta
 M.meta = {
-    key = "black-atom-operations",
-    label = "Black Atom - Operations",
-    collection_key = "black_atom",
-    collection_label = "Default",
+    key = "terra-summer-night",
+    label = "Terra Summer Night",
+    collection_key = "terra",
+    collection_label = "Terra",
     appearance = "dark",
-    icon = " 󰖔 ",
+    icon = "󰂒 󰖔 ",
     status = "release",
-    module_path = "black-atom.themes.black-atom-operations",
+    module_path = "black-atom.themes.terra-summer-night",
 }
 
 return M

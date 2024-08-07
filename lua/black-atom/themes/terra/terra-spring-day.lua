@@ -2,55 +2,55 @@ local lib = require("black-atom.lib")
 
 local M = {}
 
----@type BlackAtom.Colors.Primaries
+---@type BlackAtom.Theme.Primaries
 M.primaries = {
     -- Lows
-    "#222325",
-    "#313533",
-    "#3e4542",
-    "#4a514f",
+    "#304a3f",
+    "#385547",
+    "#416353",
+    "#517b67",
 
     -- Mids
-    "#545d5a",
-    "#616a65",
-    "#6d7873",
-    "#7a8782",
+    "#55816a",
+    "#62937a",
+    "#78a48e",
+    "#8bb19e",
 
     -- Highs
-    "#bcc3c0",
-    "#c8cfcd",
-    "#d4dbd8",
-    "#e6e8e6",
+    "#d3cec5",
+    "#dad6cd",
+    "#e4e1db",
+    "#eae7e2",
 }
 
----@type BlackAtom.Colors.Palette
+---@type BlackAtom.Theme.Palette
 M.palette = {
-    black = M.primaries[2],
-    gray = M.primaries[5],
+    black = M.primaries[1],
+    gray = M.primaries[4],
 
-    dark_red = "#5d54ad",
-    red = "#7872c2",
+    dark_red = "#d6582e",
+    red = "#da714d",
 
-    dark_green = "#628942",
-    green = "#6e9a4b",
+    dark_green = "#0d8a4e",
+    green = "#0f9d58",
 
-    dark_yellow = M.primaries[4],
-    yellow = "#57ab52",
+    dark_yellow = "#ea7b14",
+    yellow = "#e0a618",
 
-    dark_blue = M.primaries[6],
-    blue = M.primaries[5],
+    dark_blue = "#3473b2",
+    blue = "#588dc1",
 
-    dark_magenta = "#887bd3",
-    magenta = "#998ed9",
+    dark_magenta = "#B07BAC",
+    magenta = "#a586c6",
 
-    dark_cyan = "#459f55",
-    cyan = "#4db15e",
+    dark_cyan = "#0d8a76",
+    cyan = "#0f9d6d",
 
-    light_gray = M.primaries[8],
+    light_gray = M.primaries[9],
     white = M.primaries[11],
 }
 
----@type BlackAtom.Colors.Semantics
+---@type BlackAtom.Theme.UI
 M.semantics = {
     bg = {
         primary = {
@@ -86,8 +86,9 @@ M.semantics = {
             main = M.primaries[5],
             light = M.primaries[6],
         },
-        active = M.palette.cyan,
+        active = M.palette.yellow,
         invert = M.primaries[11],
+        -- this is a comment
         neutral = M.primaries[7],
         diff = {
             add = M.palette.green,
@@ -98,7 +99,7 @@ M.semantics = {
     },
 }
 
----@type BlackAtom.ThemeColors
+---@type BlackAtom.Theme.Colors
 M.colors = {
     none = "NONE",
     primaries = M.primaries,
@@ -106,16 +107,16 @@ M.colors = {
     semantics = M.semantics,
 }
 
----@type BlackAtom.ThemeMeta
+---@type BlackAtom.Theme.Meta
 M.meta = {
-    key = "black-atom-medical",
-    label = "Black Atom - Medical",
-    collection_key = "black_atom",
-    collection_label = "Default",
+    key = "terra-spring-day",
+    label = "Terra Spring Day",
+    collection_key = "terra",
+    collection_label = "Terra",
     appearance = "light",
-    icon = " 󰖔 ",
-    status = "release",
-    module_path = "black-atom.themes.black-atom-medical",
+    icon = "󰧲  ",
+    status = "beta",
+    module_path = "black-atom.themes.terra-spring-day",
 }
 
 return M
