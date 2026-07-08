@@ -92,7 +92,7 @@ M.syntax = {
         default = "#3e4349",
         builtin = "#3e4349",
         member = "#6a6f76",
-        parameter = "#409d48",
+        parameter = "#df6989",
     },
     property = {
         default = "#6a6f76",
