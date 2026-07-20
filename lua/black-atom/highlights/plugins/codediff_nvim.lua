@@ -10,8 +10,10 @@ return {
             -- Diff highlights
             CodeDiffLineInsert = { bg = ui.bg.add },
             CodeDiffLineDelete = { bg = ui.bg.delete },
+
             CodeDiffCharInsert = { fg = ui.fg.add, bg = ui.bg.add, bold = true },
             CodeDiffCharDelete = { fg = ui.fg.delete, bg = ui.bg.delete, bold = true },
+
             CodeDiffFiller = { fg = ui.fg.subtle },
 
             -- Moved code highlights
