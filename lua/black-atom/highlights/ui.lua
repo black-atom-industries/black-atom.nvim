@@ -17,7 +17,7 @@ return {
             NonText = { fg = ui.fg.subtle },
             Whitespace = { link = "NonText" },
             Title = { fg = ui.fg.accent },
-            Directory = { fg = ui.fg.default, bold = true },
+            Directory = { fg = ui.fg.accent, bold = true },
             Conceal = { fg = ui.fg.subtle },
             Question = { fg = ui.fg.accent },
 
