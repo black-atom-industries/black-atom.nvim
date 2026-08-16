@@ -91,11 +91,11 @@ M.syntax = {
     variable = {
         default = "#dbcfbf",
         builtin = "#cec2b3",
-        member = "#b8b0a5",
+        member = "#9b9082",
         parameter = "#b8b0a5",
     },
     property = {
-        default = "#b8b0a5",
+        default = "#9b9082",
     },
     string = {
         default = "#dbcfbf",
